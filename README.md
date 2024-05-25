@@ -5,9 +5,7 @@ Yan's Lab, Indiana University Indianapolis
 Developed by Linhui Xie
 
 ## Description
-TransFuse is an interpretable multi-omic graph neural network approach for integratively identifying network-level biomarkers of target diseases. Originally forked from Varmole(https://github.com/namtk/Varmole). TransFuse addresses the incompleteness issue of multi-omic data through a transfer learning approach. By pretraining on single-omic connections and transferring the learned knowledge to multi-omic connections, TransFuse ensures more accurate integration and interpretation of diverse biological data types. It incorporates individual connections between protein-protein, SNP-gene, and gene-protein interactions, providing a more detailed understanding of biological networks compared to a single transparent layer integrating quantitative trait loci (QTLs) and gene regulatory networks (GRNs) into prior biological knowledge.
-
-TransFuse extends its capabilities by modeling several critical biological interactions: genotypic variations (e.g., SNPs) affecting gene expression, gene-protein regulatory networks, and protein-protein interaction networks. Additionally, it integrates gene expression and protein levels to model proteoforms or protein complexes, offering a comprehensive view of the biological systems. This multi-omic graph neural network not only enhances the identification of biomarkers but also aids in understanding the underlying mechanisms of target diseases through its robust and interpretable framework.
+TransFuse is an interpretable multi-omic graph neural network to identify multi-omic disease network modules. It was extended from MoFNet(https://github.com/JW-Yan/MoFNet) and additonally addressed the missing data issue commonly observed in multi-omic data collections through a transfer learning approach. 
 
 
 ## Installation
@@ -22,13 +20,13 @@ sklearn >= 1.0.2
 
 
 ## Usage
-Prepare your multi-omic matrix data in .csv format. Each row should contain the multi-omic data for a single participant, with columns representing the multi-omic features. The adjacency matrix should also be in .csv format, with rows and columns corresponding to the total number of multi-omic features. Place all input files in the same directory.
+Prepare your multi-omic matrix data in .csv format. Each row should contain the multi-omic data of one participant, with columns representing the multi-omic features. The adjacency matrix should also be in .csv format, with rows and columns corresponding to the total number of multi-omic features. Place all input files in the same directory.
 
 To run the code, use one of the following commands in your terminal, specifying the path to your dataset folder and the desired training mode:
-$ python transfuse_main.py /the_path_to_your_dataset/ pretrain
-$ python transfuse_main.py /the_path_to_your_dataset/ baseline
-$ python transfuse_main.py /the_path_to_your_dataset/ transferweight
-$ python transfuse_main.py /the_path_to_your_dataset/ fine-tune
+$ python transfuse_main.py /path_to_your_dataset/ pretrain
+$ python transfuse_main.py /path_to_your_dataset/ baseline
+$ python transfuse_main.py /path_to_your_dataset/ transferweight
+$ python transfuse_main.py /path_to_your_dataset/ fine-tune
 
 
 ## Contents
