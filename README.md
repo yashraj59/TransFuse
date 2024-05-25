@@ -5,7 +5,7 @@ Yan's Lab, Indiana University Indianapolis
 Developed by Linhui Xie
 
 ## Description
-TransFuse is an interpretable multi-omic graph neural network to identify multi-omic disease network modules. It was extended from MoFNet(https://github.com/JW-Yan/MoFNet) and additonally addressed the missing data issue commonly observed in multi-omic data collections through a transfer learning approach. 
+TransFuse is an interpretable multi-omic graph neural network to identify multi-omic disease network modules. It was extended from MoFNet (https://github.com/JW-Yan/MoFNet) and additonally addressed the missing data issue commonly observed in multi-omic data collections through a transfer learning approach. 
 
 
 ## Installation
